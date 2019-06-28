@@ -1,0 +1,19 @@
+<img [@openClose]="{value: indexes[0], params: {time: time}} " (@openClose.start)="animatStart()"
+    (@openClose.done)="animateDone()" class="cup" src="assets/cup.png" (click)="cupsClickability || openEmptyCup()">
+<img [@openClose]="{value: indexes[1], params: {time: time}} " (@openClose.start)="animatStart()"
+    (@openClose.done)="animateDone()" class="cup" src="assets/cup.png" (click)="cupsClickability || openEmptyCup()">
+<img [@openClose]="{value: indexes[2], params: {time: time}} " (@openClose.start)="animatStart()"
+    (@openClose.done)="animateDone()" class="cup" src="assets/cup.png" (click)="cupsClickability || openEmptyCup()">
+<img [@openClose]="{value: indexes[3], params: {time: time}} " (@openClose.start)="animatStart()"
+    (@openClose.done)="animateDone()" class="cup" src="assets/cup.png" (click)="cupsClickability || openEmptyCup()">
+
+<div [@openClose]="{value: indexes[4], params: {time: time}} " (@openClose.start)="animatStart()"
+    (@openClose.done)="animateDone()" (click)="cupsClickability || openBall()">
+    <img [@ShowBall]="{value: showBall? '2':'1', params: {time: time/2}}" id="cupWithBall" src="assets/cup.png">
+    <img id="ball" src="assets/ball.png">
+</div>
+
+<Button class="button2" [disabled]="disableStartButton" (click)="toggle()">StartGame</Button>
+
+
+<h1>Your Score is: {{score}}</h1>
