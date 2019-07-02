@@ -77,6 +77,7 @@ export class AppComponent {
 
     this.score = 0;
     this.time = 2000;
+    localStorage.setItem('key', JSON.stringify(this.score));
 
   }
 
